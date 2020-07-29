@@ -26,6 +26,12 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ondator.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ondator
 github_username:  ondator
+rss: "subscribe rss"
+telegram: overtimehate
+comments: true
+disqus:
+  shortname: coding-stuff
+google_analytics: UA-173907209-1
 
 # Build settings
 theme: minima
