@@ -24,10 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   My thoughts about software engineering, design and architecture as well as some coding tricks in different programming languages
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ondator.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: ondator
-github_username:  ondator
 rss: "subscribe rss"
-telegram: overtimehate
 comments: true
 disqus:
   shortname: coding-stuff
@@ -37,6 +34,12 @@ google_analytics: UA-173907209-1
 theme: minima
 plugins:
   - jekyll-feed
+minima:
+  skin: dark
+  social_links: 
+    twitter: ondator
+    github: ondator
+    telegram: overtimehate
 
 # Exclude from processing.
 # The following items will not be processed, by default.
