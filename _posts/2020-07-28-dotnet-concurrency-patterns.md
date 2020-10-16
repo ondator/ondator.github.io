@@ -1,8 +1,8 @@
 ---
-layout: post
 title:  "Concurrency Patterns"
 date:   2020-07-28 23:29:43 +0300
-categories: concurrency .net
+categories: [.net, concurrency]
+tags: [.net, c#, concurrency, .net core, patterns]
 ---
 # Concurrency Patterns
 

@@ -1,3 +1,10 @@
+---
+title:  "Hierarchy vs Pattern matching"
+date:   2020-10-15 23:29:43 +0300
+categories: [design, patterns]
+tags: [c#, OOP, FP, design, patterns]
+---
+
 # Hierarchy vs Pattern matching
 
 Long time ago inspired by awesome M.Fowler book [Refactoring](https://martinfowler.com/books/refactoring.html) I was frequently asking on interview to refactor a code block like this:

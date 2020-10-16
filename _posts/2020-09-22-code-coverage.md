@@ -1,3 +1,9 @@
+---
+title:  "Code Coverage with .Net Core and Cobertura"
+date:   2020-09-22 23:29:43 +0300
+categories: [.net, code coverage]
+tags: [.net, c#, .net core, code coverage, cobertura]
+---
 # Code Coverage with .Net Core and Cobertura
 
 Already I have some routine activity to provide code coverage report for my .Net Core projects to CI. An issue turned out more complex then I appreciate so I decide to provide here the most important steps from the journey
@@ -47,9 +53,23 @@ then you should check that your csproj contains something like this:
 
 If you done this right than you can run 
 ```sh
-dotnet test --collect:"XPlat Code Coverage"
+cd MyBuisLogic.Unit.Tests && dotnet test --collect:"XPlat Code Coverage" && cd ..
 ```
+and you should find out a file `TestResults\9b78f4a3-d61c-48d7-8ad7-d4aefe299768\coverage.cobertura.xml` in your `MyBuisLogic.Unit.Tests` folder
 
+## Merge Cobertura reports
+
+If your CI system supports collecting reports from multiple Cobertura files, than you're done. Otherwise (for example in the case of Azure DevOps) you should merge multiple coverage files in one. We will done this with `reportgenerator` dotnet global tool.
+
+First of all we should install reportgenerator
+```sh
+dotnet tool install -g dotnet-reportgenerator-globaltool
+```
+And now we can merge all our coverage results into one:
+```sh
+reportgenerator "-reports:.\**\TestResults\**\coverage.cobertura.xml"
+"-targetdir:." -reporttypes:Cobertura
+```
 
 
 
