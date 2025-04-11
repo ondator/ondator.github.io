@@ -70,6 +70,7 @@ layout: default
           <img src="{{ img_placehodler }}" data-src="{{ page.image }}" class="post-preview-img">
         {% endif %}
 
+        {% capture content %}{% include plantuml.liquid html=content %}{% endcapture %}
         <!-- Using lozad. See: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
         {% if content contains '<img src=' %}
           {% assign replacement = '<img src="' | append: img_placehodler | append: '" data-src=' %}
