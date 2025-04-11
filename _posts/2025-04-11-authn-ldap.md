@@ -91,16 +91,7 @@ This command authenticates to the directory under the account with DN cn=my-acco
 
 First, let's define our goal: we want users from the DS to authenticate in Keycloak using their domain credentials (username and password). The flow looks like this:
 
-```puml
-actor User as c
-participant Keycloak as k
-participant LDAP as l
-
-c -> k: Sends domain username and password
-k -> l: Performs LDAP bind with these credentials
-l --> k: Returns authentication result
-k --> c: Informs the user of the result
-```
+![alt text](/assets/img/authn/kc-ldap.png)
 
 > I recommend practicing with a test sandbox, which you can download [here]((https://github.com/ondator/sandboxes)). You'll need the `keycloak/keycloak-postgres-dc.yml` compose file.
 
