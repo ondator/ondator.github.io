@@ -4,7 +4,6 @@ date:   2020-07-28 23:29:43 +0300
 categories: [.net, concurrency]
 tags: [.net, c#, concurrency, .net core, patterns]
 ---
-# Concurrency Patterns
 
 Here is some patterns I use in the case of creation concurrent application. All samples will written be on C#, but I believe you can simply adopt them to java or any your preferred langname
 > complete and working samples you can find on my [github](https://github.com/ondator/dotnet-concurrency-samples)

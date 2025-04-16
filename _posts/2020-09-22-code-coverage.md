@@ -4,7 +4,6 @@ date:   2020-09-22 23:29:43 +0300
 categories: [.net, code coverage]
 tags: [.net, c#, .net core, code coverage, cobertura]
 ---
-# Code Coverage with .Net Core and Cobertura
 
 Already I have some routine activity to provide code coverage report for my .Net Core projects to CI. An issue turned out more complex then I appreciate so I decide to provide here the most important steps from the journey
 

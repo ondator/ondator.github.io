@@ -5,7 +5,6 @@ categories: [architecture, agile]
 tags: [architecture, agile, archimate]
 ---
 
-# Agile Architecture. Part I
 Hi there! Here is some insights I have by reading some books, papers and docs about agile architecture. I believe that I will proceed to drill down in this topic, so this list will expands
 
 ### Dedicated system architects who are not participate in coding become useless

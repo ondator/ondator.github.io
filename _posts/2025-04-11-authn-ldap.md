@@ -3,9 +3,8 @@ title:  "Enterprise Authentication. Part 2. Directory Services and LDAP"
 date:   2025-04-11 21:30:00 +0300
 categories: [security, authN]
 tags: [security, authN, authentication, keycloak, ldap, msad]
+description: "Keycloak LDAP Federation configuration"
 ---
-
-# Enterprise Authentication. Part 2. Directory Services and LDAP
 
 Here is full authN articles list:
 

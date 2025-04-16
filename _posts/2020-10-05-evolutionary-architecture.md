@@ -5,8 +5,6 @@ categories: [architecture, agile]
 tags: [architecture, agile, books]
 ---
 
-# Evolutionary Architecture
-
 Recently I read awesome book by Neal Ford called ["Evolutionary Architecture"](http://nealford.com/books/buildingevolutionaryarchitectures.html). I was so inspired that I write a lot of my keynotes of this book. First of all: I highly recomend to all read it and I believe that everyone can adapt some techniques from this book.
 
 - Main assumption: software changes is cheap, so we can adapt to new changes and evolve. To meet this point we first of all should adopt all modern practices(devops, agile, BI, etc)
