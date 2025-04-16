@@ -12,6 +12,9 @@ title: Coding stuff                          # the main title
 
 tagline: Some thoughts, tips and tricks about IT  # it will display as the sub-title
 
+plugins:
+  - jekyll-seo-tag
+
 description: >-                        # used by seo meta and the atom feed
   My thoughts about software engineering, design and architecture 
   as well as some coding tricks in different programming languages
