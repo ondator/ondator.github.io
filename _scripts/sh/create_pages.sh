@@ -25,8 +25,8 @@ _read_yaml() {
 
 read_categories() {
   local _yaml="$(_read_yaml "$1")"
-  local _categories="$(echo "$_yaml" | yq r - "categories.*")"
-  local _category="$(echo "$_yaml" | yq r - "category")"
+  local _categories="$(echo "$_yaml" | yq e -N ".categories[]" -)"
+  local _category="$(echo "$_yaml" | yq e ".category" -)"
 
   if [[ -n $_categories ]]; then
     echo "$_categories"
@@ -37,8 +37,8 @@ read_categories() {
 
 read_tags() {
   local _yaml="$(_read_yaml "$1")"
-  local _tags="$(echo "$_yaml" | yq r - "tags.*")"
-  local _tag="$(echo "$_yaml" | yq r - "tag")"
+  local _tags="$(echo "$_yaml" | yq e -N ".tags[]" -)"
+  local _tag="$(echo "$_yaml" | yq e ".tag" -)"
 
   if [[ -n $_tags ]]; then
     echo "$_tags"
@@ -139,9 +139,13 @@ main() {
 
   init
 
+  echo "[TRACE] start categories creation"
+
   for _file in $(find "_posts" -type f \( -iname \*.md -o -iname \*.markdown \)); do
     local _categories=$(read_categories "$_file")
     local _tags=$(read_tags "$_file")
+    echo "[TRACE] in $_file found $_categories categories"
+    echo "[TRACE] in $_file found $_tags tags"
 
     create_pages "$_categories" $TYPE_CATEGORY
     create_pages "$_tags" $TYPE_TAG
@@ -154,6 +158,8 @@ main() {
   if [[ $tag_count -gt 0 ]]; then
     echo "[INFO] Succeed! $tag_count tag-pages created."
   fi
+
+  echo "[TRACE] end categories creation"
 }
 
 main
