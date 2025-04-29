@@ -1,12 +1,12 @@
 ---
 title:  "Enterprise Authentication. Part 2. Directory Services and LDAP"
 date:   2025-04-11 21:30:00 +0300
-categories: [security, authN]
+categories: [security, authentication]
 tags: [security, authN, authentication, keycloak, ldap, msad]
 description: "Keycloak LDAP Federation configuration"
 ---
 
-Here is full authN articles list:
+Here is full authentication articles list:
 
 - [Enterprise Authentication. Part 1. Basics](/posts/authn)
 - Enterprise Authentication. Part 2. Directory Services and LDAP <- you are here
@@ -261,4 +261,4 @@ KEYCLOAK_LOG_LEVEL: WARN,...,,org.keycloak.storage.ldap:trace
   - 532 and 773: Password expired.
 
 
-We'll finish here with LDAP and DS, on the next part we will improve our DS intgration with Kerberos protocol.
+We'll finish here with LDAP and DS, on the next part we will improve our DS integration with Kerberos protocol.
