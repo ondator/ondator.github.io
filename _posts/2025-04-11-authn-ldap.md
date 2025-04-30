@@ -4,6 +4,7 @@ date:   2025-04-11 21:30:00 +0300
 categories: [security, authentication]
 tags: [security, authN, authentication, keycloak, ldap, msad]
 description: "Keycloak LDAP Federation configuration"
+mermaid: true
 ---
 
 Here is full authentication articles list:
@@ -90,7 +91,17 @@ This command authenticates to the directory under the account with DN cn=my-acco
 
 First, let's define our goal: we want users from the DS to authenticate in Keycloak using their domain credentials (username and password). The flow looks like this:
 
-![alt text](/assets/img/authn/kc-ldap.png)
+```mermaid
+sequenceDiagram
+actor c as User
+participant k as Keycloak
+participant l as LDAP
+
+c ->>  k: отправляем доменные логин и пароль
+k ->> l: делаем LDAP bind с этими данными
+l -->>  k: результат аутентификации
+k -->> c: сообщаем пользователю результат
+```
 
 > I recommend practicing with a test sandbox, which you can download [here]((https://github.com/ondator/sandboxes)). You'll need the `keycloak/keycloak-postgres-dc.yml` compose file.
 
