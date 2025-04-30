@@ -97,10 +97,10 @@ actor c as User
 participant k as Keycloak
 participant l as LDAP
 
-c ->>  k: отправляем доменные логин и пароль
-k ->> l: делаем LDAP bind с этими данными
-l -->>  k: результат аутентификации
-k -->> c: сообщаем пользователю результат
+c ->>  k: domain login and password
+k ->> l: make LDAP bind with credentials
+l -->>  k: authentication result
+k -->> c: notify user about authentication result
 ```
 
 > I recommend practicing with a test sandbox, which you can download [here]((https://github.com/ondator/sandboxes)). You'll need the `keycloak/keycloak-postgres-dc.yml` compose file.
