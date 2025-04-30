@@ -10,7 +10,7 @@ Here is full authentication articles list:
 
 - [Enterprise Authentication. Part 1. Basics](/posts/authn)
 - Enterprise Authentication. Part 2. Directory Services and LDAP <- you are here
-- Enterprise Authentication. Part 3. Kerberos
+- [Enterprise Authentication. Part 3. Kerberos](/posts/authn-krb)
 - Enterprise Authentication. Part 4. SAML
 - Enterprise Authentication. Part 5. OIDC
 - Enterprise Authentication. Part 6. Keycloak in depth
