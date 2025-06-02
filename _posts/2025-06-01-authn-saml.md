@@ -1,6 +1,6 @@
 ---
 title:  "Enterprise Authentication. Part 4. SAML"
-date:   2025-06-02 21:00:00 +0300
+date:   2025-06-01 21:00:00 +0300
 categories: [security, authentication]
 tags: [security, authN, authentication, keycloak, saml, adfs]
 description: "Keycloak SAML Identity Provider configuration"
